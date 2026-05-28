@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ghost Shop - Обзоры</title>
+<style>
+  body {
+    font-family: 'Comic Sans MS', cursive;
+    margin: 0;
+    padding-top: 130px;
+    background-image: url('kl.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    transition: background 0.5s ease, color 0.5s ease;
+    color: #000;
+  }
+  body.dark-mode {
+    background-image: url('popo.jpg');
+    color: #fff;
+  }
+  header {
+    background-image: url('ioio.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  }
+  .logo {
+    font-size: 28px;
+    color: #009df8;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+  }
+  nav ul li {
+    display: inline-block;
+    margin-right: 15px;
+  }
+  nav a {
+    color: #009df8;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  nav a:hover {
+    text-decoration: underline;
+  }
+  .theme-toggle {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #009df8;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  main {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+  }
+  h1 {
+    margin-bottom: 30px;
+  }
+  .video-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+  iframe {
+    width: 300px;
+    height: 200px;
+    border: none;
+    border-radius: 8px;
+  }
+  #game-container {
+    background-color: rgba(255,255,255,0.9);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 0 auto 50px auto;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+  }
+  #question {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  #options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .option-btn {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #887bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  .option-btn:hover {
+    background-color: #0056b3;
+  }
+  #next-btn {
+    display: none;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  #next-btn:hover {
+    background-color: #218838;
+  }
+  #result {
+    display: none;
+    margin-top: 20px;
+    font-size: 18px;
+  }
+  footer {
+    background-color: #3a3636;
+    padding: 20px 0;
+    text-align: center;
+    color: #fff;
+    margin-top: 40px;
+  }
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 960px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+  }
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .social-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+  }
+  .social-icon:hover {
+    transform: scale(1.2);
+  }
+  #scrollToTopButton{
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #0082fc;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <a href="лёша.html" class="logo">Ghost Shop</a>
+  <nav>
+    <ul>
+      <li><a href="лёша.html">Главный</a></li>
+      <li><a href="Funko POP.html">Funko POP</a></li>
+      <li><a href="#">Geek Товары</a></li>
+    </ul>
+  </nav>
+  <button class="theme-toggle" onclick="toggleDarkMode()">Тёмная тема</button>
+</header>
+
+<main>
+  <h1>Обзоры фигурок</h1>
+  <div class="video-container">
+    <div>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/X7e_De4JUO0?si=ZSAtujejK27AKU2I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <p>Funko Pop</p>
+    </div>
+    <div>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/ESjUeKhpXOY?si=8vvbSH0KiRBgEdS0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <p>Nendoroid</p>
+    </div>
+    <div>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/ucFFeX5874I?si=ZxPkfuTqHMXjzatu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <p>Аниме Фигурки</p>
+    </div>
+  </div>
+
+  <div id="game-container">
+    <h2>Опросник</h2>
+    <div id="question"></div>
+    <div id="options"></div>
+    <button id="next-btn">Следующий вопрос</button>
+    <div id="result">Ваш результат: <span id="score">0</span></div>
+    <div id="discount" style="display:none; font-weight:bold; margin-top:10px;">Поздравляем! Вы получили 10% скидку!</div>
+  </div>
+</main>
+
+<footer>
+  <div class="footer-container">
+    <div class="social-links">
+      <a href="#"><img src="YouTube_dark_icon_(2017).svg.png" class="social-icon"></a>
+      <a href="#"><img src="free-instagram-logo-icon-3497-thumb.png" class="social-icon"></a>
+      <a href="#"><img src="8276081.png" class="social-icon"></a>
+    </div>
+    <p>&copy; 2025 Ghost Shop. Все права защищены.</p>
+  </div>
+</footer>
+
+<button id="scrollToTopButton" onclick="scrollToTop()">Наверх</button>
+
+<script>
+  // Тёмная тема
+  function toggleDarkMode(){
+    document.body.classList.toggle('dark-mode');
+  }
+
+  // Плавный скролл "Наверх"
+  function scrollToTop(){
+    window.scrollTo({ top:0, behavior:'smooth' });
+  }
+  window.onscroll = function(){
+    if(document.body.scrollTop > 20 || document.documentElement.scrollTop > 20){
+      document.getElementById("scrollToTopButton").style.display = "block";
+    } else {
+      document.getElementById("scrollToTopButton").style.display = "none";
+    }
+  };
+
+  // === Опросник ===
+  const gameQuestions = [
+    {question: "Какая фигурка показана в первом видео?", options: ["Funko Pop", "Nendoroid", "Аниме", "LEGO"], answer: "Funko Pop"},
+    {question: "Какой бренд фигурок упоминается во втором видео?", options: ["Funko Pop", "Nendoroid", "Banpresto", "Good Smile"], answer: "Nendoroid"},
+    {question: "Как называется категория фигурок в третьем видео?", options: ["Игровые", "Аниме", "Комиксы", "Фантастика"], answer: "Аниме"}
+  ];
+  let gameQuestionIndex = 0;
+  let gameScore = 0;
+
+  const gameQuestionElement = document.getElementById('question');
+  const gameOptionsElement = document.getElementById('options');
+  const gameScoreElement = document.getElementById('score');
+  const gameResultElement = document.getElementById('result');
+  const gameNextButton = document.getElementById('next-btn');
+  const discountElement = document.getElementById('discount');
+
+  function startGame(){
+    gameQuestionIndex = 0;
+    gameScore = 0;
+    gameScoreElement.textContent = gameScore;
+    gameResultElement.style.display = 'none';
+    discountElement.style.display = 'none';
+    showGameQuestion(gameQuestions[gameQuestionIndex]);
+  }
+
+  function showGameQuestion(question){
+    gameQuestionElement.textContent = question.question;
+    gameOptionsElement.innerHTML = '';
+    question.options.forEach(option => {
+      const btn = document.createElement('button');
+      btn.textContent = option;
+      btn.classList.add('option-btn');
+      btn.onclick = () => selectGameOption(option);
+      gameOptionsElement.appendChild(btn);
+    });
+    gameNextButton.style.display = 'none';
+  }
+
+  function selectGameOption(selected){
+    const correct = gameQuestions[gameQuestionIndex].answer === selected;
+    if(correct) gameScore++;
+    gameScoreElement.textContent = gameScore;
+    gameNextButton.style.display = 'block';
+  }
+
+  gameNextButton.onclick = () => {
+    gameQuestionIndex++;
+    if(gameQuestionIndex < gameQuestions.length){
+      showGameQuestion(gameQuestions[gameQuestionIndex]);
+    } else {
+      endGame();
+    }
+  }
+
+  function endGame(){
+    gameQuestionElement.style.display = 'none';
+    gameOptionsElement.style.display = 'none';
+    gameNextButton.style.display = 'none';
+    gameResultElement.style.display = 'block';
+    gameResultElement.textContent = `Ваш результат: ${gameScore} / ${gameQuestions.length}`;
+    if(gameScore === gameQuestions.length){
+      discountElement.style.display = 'block';
+    }
+  }
+
+  startGame();
+</script>
+
+</body>
+</html>

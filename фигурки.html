@@ -1,0 +1,200 @@
+<html lang="ru">
+    <head>
+        <style>
+         header {
+      background-color: #001761;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #8dc1fc;
+      text-decoration: none;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    nav ul li {
+      display: inline;
+      margin-right: 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #009df8;
+      font-weight: bold;
+    }
+
+    .search {
+      margin-top: 20px;
+    }
+
+    .search input[type="text"] {
+      padding: 10px;
+      width: 300px;
+    }
+
+    .search button {
+      padding: 10px 20px;
+      background-color: #0199ff;
+      border: none;
+      cursor: pointer;
+    }
+    footer {
+      background-color: #0027d6;
+      padding: 10px 0;
+      text-align: center;
+      color: #fff;
+      margin-top: 40px;
+      font-size: 14px;
+    }
+
+    footer a {
+      color: #009df8;
+      text-decoration: none;
+      margin: 0 5px;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    h1{
+        text-align: center;
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+    .ingredient-group{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+    .ingredient{
+        padding: 20px;
+        border: 1px solid #0199ff;
+        text-align: center;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+    }
+    .ingredient img{
+        width: 500px;
+        height: 400px;
+        border-radius: 5px;
+    }
+    /* Модальное окно */
+    .modal {
+      display: none; /* скрыто по умолчанию */
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    .modal-content {
+      background-color: #fff;
+      margin: 15% auto;
+      padding: 20px;
+      border-radius: 5px;
+      width: 70%;
+      max-width: 600px;
+      position: relative;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      text-align: center;
+    }
+
+    .modal-content img {
+      max-width: 300px;
+      max-height: 200px;
+      object-fit: contain;
+    }
+
+    .close {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      color: #000;
+      font-size: 24px;
+      font-weight: bold;
+      cursor: pointer;
+    } 
+        </style>
+    </head>
+
+<body>
+    <header>
+        <a href="лёша.html" class="logo">Ghost Shop</a>
+        <nav>
+            <ul>
+                <li><a href="лёша.html">Главная</a></li>
+                <li><a href="Funko POP.html">Funko POP! Tokyo Ghoul:Re</a></li>
+                <li><a href="#">Funko POP! Stranger Things</a></li>
+                <li><a href="#">Funko POP! Harry Potter</a></li>
+                <li><a href="#">Funko POP! Five Nights at Freddy’s</a></li>
+
+            </ul>
+        </nav>
+        <div class="search">
+            <input type="text" placeholder="Поиск...">
+            <button>Найти</button>
+        </div>
+    </header>
+
+    <main>
+        <h1>Tokyo Ghoul:Re</h1>
+        <div class="ingredient-group">
+            <div class="ingredient-item">
+                <div class="ingredient">
+                    <h3>Haise Sasaki</h3>
+                    <img src="funko-pop-russia-Haise-Sasaki-Tokyo-Ghoul-re-1124-FU57641-360x300.png" alt="Haise Sasaki">
+                    <p>Funko: Tokyo Ghoul:Re. Фигурка POP: Haise Sasaki</p>
+                </div>
+            </div>
+            <div class="ingredient-item">
+                <div class="ingredient">
+                    <h3>Kisho Arima</h3>
+                    <img src="61UL5S7eiML.jpg" alt="Kisho Arima">
+                    <p>Фигурка Funko POP! Tokyo Ghoul:Re: Kisho Arima, 10 см</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="ingredient-group">
+            <div class="ingredient-item">
+                <div class="ingredient">
+                    <h3>Juzo Suzuya</h3>
+                    <img src="75519F_1.png" alt="Juzo Suzuya">
+                    <p>Funko: Tokyo Ghoul:Re. Фигурка POP: Juzo Suzuya</p>
+                </div>
+            </div>
+            <div class="ingredient-item">
+                <div class="ingredient">
+                    <h3>Ken Kaneki (Final Battle)</h3>
+                    <img src="61ZKn34BYgL.jpg" alt="Ken Kaneki (Final Battle)">
+                    <p>Фигурка Funko POP! Tokyo Ghoul:Re: Ken Kaneki (Final Battle), 10 см</p>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+ <footer>
+    <p>&copy; 2025 Ghost Shop. Все права защищены.</p>
+    <p>
+      <a href="#">Политика конфиденциальности</a> | 
+      <a href="#">Условия использования</a> | 
+      <a href="#">Контакты</a>
+    </p>
+  </footer>

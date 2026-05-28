@@ -1,0 +1,425 @@
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="https://unpkg.com/simplebar@5.3.6/dist/simplebar.css">
+<script src="https://unpkg.com/simplebar@5.3.6/dist/simplebar.js"></script>
+
+<style>
+body {
+  font-family: 'Comic Sans MS', cursive;
+  margin: 0;
+  padding: 0;
+  padding-top: 130px;
+  background-image: url('kl.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  color: #ffe6e6;
+  transition: background-image 0.5s ease;
+}
+
+body.dark-mode {
+  background-image: url('popo.jpg');
+  color: #fff;
+}
+
+header {
+  background-image: url('thumb-1920-849761.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 20px;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  border: none;
+  box-shadow: 0 0 20px #ff0000;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  color: #ff1b1b;
+  text-decoration: none;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #ff3b3b;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #fff;
+}
+
+.search {
+  margin-top: 15px;
+}
+
+.search input[type="text"] {
+  padding: 10px;
+  width: 250px;
+  border-radius: 5px;
+  border: none;
+}
+
+.search button {
+  padding: 10px 20px;
+  background-color: #ff0000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.search button:hover {
+  background-color: #ff4a4a;
+}
+
+.theme-toggle {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #ff0000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+h1 {
+  text-align: center;
+  font-size: 28px;
+  color: #ff1b1b;
+  text-shadow: 0 0 10px #ff0000;
+  margin-bottom: 30px;
+}
+
+/* Сетка карточек */
+.ingredient-group {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.ingredient {
+  background: linear-gradient(145deg, rgba(50,0,0,0.85), rgba(20,0,0,0.85));
+  border: 2px solid #ff1b1b;
+  border-radius: 15px;
+  padding: 15px;
+  width: 260px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ingredient img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0 8px 20px rgba(255,0,0,0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+}
+
+.ingredient img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px #ff0000, 0 0 50px #ff3b3b;
+  filter: brightness(1.1);
+}
+
+.ingredient h3 {
+  color: #ff4444;
+  margin-bottom: 8px;
+  text-shadow: 0 0 5px #ff0000;
+}
+
+.ingredient p {
+  font-size: 14px;
+  color: #ffe6e6;
+}
+
+.seasonal-ingredients {
+  background-color: rgba(30,0,0,0.85);
+  padding: 20px;
+  border-radius: 10px;
+  margin: 40px auto;
+  max-width: 1000px;
+  color: #ffe6e6;
+}
+
+.seasonal-ingredients h2 {
+  font-size: 24px;
+  color: #ff3b3b;
+  margin-bottom: 15px;
+  text-align: center;
+  text-shadow: 0 0 8px #ff0000;
+}
+
+.seasonal-ingredients ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 0;
+  list-style: none;
+}
+
+.seasonal-ingredients li {
+  background: rgba(50,0,0,0.9);
+  border: 2px solid #ff1b1b;
+  border-radius: 12px;
+  padding: 15px;
+  width: calc(50% - 20px);
+  box-sizing: border-box;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.seasonal-ingredients li:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 20px #ff0000;
+}
+
+.season-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+footer {
+  background-color: #b30000;
+  color: #fff;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 960px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.social-links img {
+  width: 30px;
+  height: 30px;
+  margin: 0 5px;
+  filter: brightness(0) invert(1);
+  transition: transform 0.3s ease;
+}
+
+.social-links img.youtube {
+  filter: none;
+}
+
+.social-links img:hover {
+  transform: scale(1.2);
+}
+
+.subscription-form input {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  margin-right: 10px;
+}
+
+.subscription-form button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  background-color: #ff4a4a;
+  color: #fff;
+  cursor: pointer;
+}
+
+.subscription-form button:hover {
+  background-color: #ff1b1b;
+}
+
+/* WhatsApp */
+.whatsapp-block {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.whatsapp-button {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  background-image: url('WhatsApp.svg.png');
+  background-size: cover;
+  background-position: center;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); box-shadow: 0 0 0 rgba(0,255,0,0.7);}
+  50% { transform: scale(1.1); box-shadow: 0 0 15px rgba(0,255,0,0.7);}
+  100% { transform: scale(1); box-shadow: 0 0 0 rgba(0,255,0,0.7);}
+}
+
+.simplebar-scrollbar:before {
+  background-color: #ff3b3b !important;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <a href="лёша.html" class="logo">Ghost Shop</a>
+  <nav>
+    <ul>
+      <li><a href="лёша.html">Главная</a></li>
+      <li><a href="Funko POP.html">Tokyo Ghoul:Re</a></li>
+      <li><a href="Funko POP! Stranger Things.html">Stranger Things</a></li>
+      <li><a href="#">Harry Potter</a></li>
+      <li><a href="#">FNAF</a></li>
+    </ul>
+  </nav>
+  <div class="search">
+    <input type="text" placeholder="Поиск...">
+    <button>Найти</button>
+  </div>
+  <button class="theme-toggle" onclick="toggleDarkMode()">Тёмная тема</button>
+</header>
+
+<main>
+<h1>Tokyo Ghoul:Re</h1>
+
+<div class="ingredient-group">
+  <div class="ingredient">
+    <h3>Haise Sasaki</h3>
+    <img src="funko-pop-russia-Haise-Sasaki-Tokyo-Ghoul-re-1124-FU57641-360x300.jpg" alt="Haise Sasaki">
+    <p>13.000 Тг</p>
+    <p>Фигурка Funko POP! Tokyo Ghoul:Re: Haise Sasaki, 10 см</p>
+  </div>
+
+  <div class="ingredient">
+    <h3>Kisho Arima</h3>
+    <img src="61UL5S7eiML.jpg" alt="Kisho Arima">
+    <p>11.999 Тг</p>
+    <p>Фигурка Funko POP! Tokyo Ghoul:Re: Kisho Arima, 10 см</p>
+  </div>
+
+  <div class="ingredient">
+    <h3>Juzo Suzuya</h3>
+    <img src="75519F_1.jpg" alt="Juzo Suzuya">
+    <p>18.999 Тг</p>
+    <p>Funko: Tokyo Ghoul:Re. Фигурка POP: Juzo Suzuya</p>
+  </div>
+
+  <div class="ingredient">
+    <h3>Ken Kaneki (Final Battle)</h3>
+    <img src="61ZKn34BYgL.jpg" alt="Ken Kaneki">
+    <p>14.999 Тг</p>
+    <p>Фигурка Funko POP! Tokyo Ghoul:Re: Ken Kaneki (Final Battle), 10 см</p>
+  </div>
+</div>
+
+<div class="seasonal-ingredients" data-simplebar>
+  <h2>Коллекционные фигурки</h2>
+  <ul>
+    <li>
+      <h3>Funko POP</h3>
+      <img class="season-image" src="71pclm5uZ4L._AC_SL1300_.jpg" alt="Funko">
+      <p>Art The Clown — точный дизайн, привлекательный для коллекционеров.</p>
+    </li>
+    <li>
+      <h3>Nendoroid</h3>
+      <img class="season-image" src="nenk.jpg" alt="Nendoroid">
+      <p>Коллекционная фигурка Vault Boy из Fallout.</p>
+    </li>
+    <li>
+      <h3>Bandai</h3>
+      <img class="season-image" src="BNS442.jpg" alt="Bandai">
+      <p>Фигурка Маки Зенин из школы дзюдзюцу.</p>
+    </li>
+    <li>
+      <h3>Aniplex</h3>
+      <img class="season-image" src="tant4.jpeg" alt="Aniplex">
+      <p>Фигурка Танджиро Камадо из "Клинок, рассекающий демонов".</p>
+    </li>
+  </ul>
+</div>
+
+<div class="whatsapp-block">
+  <a href="https://api.whatsapp.com/send?phone=87077070707">
+    <button class="whatsapp-button"></button>
+  </a>
+</div>
+
+</main>
+
+<footer>
+<div class="subscription-form">
+  <input type="email" placeholder="Введите ваш email">
+  <button>Подписаться</button>
+</div>
+
+<div class="footer-container">
+  <div class="social-links">
+    <a href="#"><img src="YouTube_dark_icon_(2017).svg.png" alt="YouTube" class="youtube"></a>
+    <a href="#"><img src="free-instagram-logo-icon-3497-thumb.png" alt="Instagram"></a>
+    <a href="#"><img src="8276081.png" alt="Telegram"></a>
+  </div>
+
+  <div class="contact-info">
+    <p>Email: <a href="mailto:ghosthyl8@gmail.com">ghosthyl8@gmail.com</a></p>
+    <p>Телефон: <a href="tel:+77077077777">+7 (707) 707-77-77</a></p>
+    <p>Адрес: 107 Абая проспект, Алматы, Казахстан</p>
+  </div>
+</div>
+
+<p>&copy; 2025 Ghost Shop. Все права защищены.</p>
+</footer>
+
+<script>
+function toggleDarkMode() {
+  document.body.classList.toggle('dark-mode');
+}
+
+function parallaxScroll(){
+  const header = document.querySelector('header');
+  const scrolled = window.pageYOffset;
+  header.style.backgroundPositionY = -(scrolled*0.3)+'px';
+}
+window.addEventListener('scroll', parallaxScroll);
+
+/* Поиск */
+document.querySelector('.search button').addEventListener('click', function() {
+  const query = document.querySelector('.search input[type="text"]').value.toLowerCase();
+  const cards = document.querySelectorAll('.ingredient');
+  cards.forEach(card => {
+    const title = card.querySelector('h3').textContent.toLowerCase();
+    card.style.display = title.includes(query) ? 'block' : 'none';
+  });
+});
+
+new SimpleBar(document.querySelector('.seasonal-ingredients'));
+</script>
+</body>
+</html>
